@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/src/index.js",
+            "preLaunchTask": "npm: install",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
