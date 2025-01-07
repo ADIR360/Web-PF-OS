@@ -78,20 +78,21 @@ const GitHubApp = ({ onClose }) => {
 
   return (
     <div className={`github-window ${isMaximized ? 'maximized' : ''}`}>
-      <div className="window-header">
-        <h2>GitHub App</h2>
-        <div>
-          <button onClick={toggleMaximize}>
-            {isMaximized ? 'Restore' : 'Maximize'}
-          </button>
-          <button onClick={onClose}>Close</button>
-        </div>
+    <div className="GitHub-window-header">
+      <h2>GitHub</h2>
+      <div className="button-container">
+        <button onClick={toggleMaximize}>
+          {isMaximized ? 'Restore' : 'Maximize'}
+        </button>
+        <button onClick={onClose}>❌</button>
       </div>
+    </div>
+      {/* Rest of the component remains the same */}
       <div className="content">
-        <div className="profile-container">
-          <nav className="navbar">
-            <h1 className="navbar-title">ADIR360</h1>
-            <ul className="navbar-links">
+        <div className="GitHub-profile-container">
+          <nav className="GitHub-navbar">
+            <h1 className="GitHub-navbar-title">ADIR360</h1>
+            <ul className="GitHub-navbar-links">
               <li onClick={() => handlePageChange('overview')}>Overview</li>
               <li onClick={() => handlePageChange('repositories')}>Repositories</li>
             </ul>
@@ -99,10 +100,10 @@ const GitHubApp = ({ onClose }) => {
 
           <div className="pages">
             {currentPage === 'overview' && (
-              <div className="profile-content">
-                <div className="profile-header">
+              <div className="GitHub-profile-content">
+                <div className="GitHub-profile-header">
                   <img
-                    className="profile-image"
+                    className="GitHub-profile-image"
                     src={ArushImage}
                     alt="Profile"
                   />
@@ -111,9 +112,9 @@ const GitHubApp = ({ onClose }) => {
                     <p>ADIR360 • he/him</p>
                   </div>
                 </div>
-                <div className="gif-section">
+                <div className="GitHub-gif-section">
                   <img
-                    className="profile-gif"
+                    className="GitHub-profile-gif"
                     src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXl2c2EzYjM4Yjg3a2h2dGhpZGh5ejN1YmFlZ3dsemp3MmF4dHE4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FWcoE5AkG3BRe/giphy.gif"
                     alt="GIF"
                     style={{ width: '300px', height: '150px' }}
@@ -151,16 +152,16 @@ const GitHubApp = ({ onClose }) => {
                     Instagram
                   </a>
                 </div>
-                <div className="about">
+                <div className="GitHub-about">
                   <h3>About Me</h3>
                   <p>
-                    I’m a passionate Cybersecurity student with hands-on
+                    I'm a passionate Cybersecurity student with hands-on
                     experience in identifying and mitigating various cyber
                     threats.
                   </p>
                   <p>I am a pre-final year B.Tech CSE student specializing in cybersecurity, with expertise in Python, C++, and the MERN stack. I have hands-on experience with tools like Wireshark, Metasploit, Nmap, and kernel-level programming in Go. My projects include a Go-Network-Scanner, an IP Vulnerability Scanner, a facial unlocking system, and a voice recognition system, along with other key tools designed for network and security analysis.
 
-As a 5-time hackathon participant and open-source developer, I’m driven to continuously improve my skills and tackle complex problems. I’m passionate about learning, collaborating, and making meaningful contributions in the cybersecurity space.</p>
+ I'm driven to continuously improve my skills and tackle complex problems. I'm passionate about learning, collaborating, and making meaningful contributions in the cybersecurity space.</p>
                 </div>
               </div>
             )}

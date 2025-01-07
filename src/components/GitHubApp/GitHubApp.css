@@ -45,7 +45,7 @@ body {
 }
 
 /* Header styles */
-.window-header {
+.GitHub-window-header {
   height: 40px;
   background-color: #161b22;
   display: flex;
@@ -56,24 +56,28 @@ body {
   color: white;
 }
 
-.window-header h2 {
+.GitHub-window-header h2 {
   font-size: 16px;
   margin: 0;
 }
-
-.window-header button {
-  margin-left: 10px;
+.GitHub-window-header .button-container {
+  display: flex; /* Align buttons horizontally */
+  gap: 10px; /* Space between buttons */
+}
+.GitHub-window-header button {
   font-size: 12px;
-  padding: 4px 8px;
   background-color: #21262d;
   border: 1px solid #30363d;
   color: #c9d1d9;
   border-radius: 4px;
   cursor: pointer;
+  padding: 8px 12px;
 }
-
+.GitHub-window-header button:hover {
+  background-color: #30363d;
+}
 /* Navbar styles */
-.navbar {
+.GitHub-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,12 +85,12 @@ body {
   background-color: #161b22;
 }
 
-.navbar-title {
+.GitHub-navbar-title {
   font-size: 24px;
   font-weight: bold;
 }
 
-.navbar-links {
+.GitHub-navbar-links {
   display: flex;
   gap: 16px;
   list-style: none;
@@ -94,25 +98,25 @@ body {
   padding: 0;
 }
 
-.navbar-links li {
+.GitHub-navbar-links li {
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 4px;
 }
 
-.navbar-links li.active {
+.GitHub-navbar-links li.active {
   background-color: rgba(255, 255, 255, 0.1);
   font-weight: bold;
 }
 
 /* Profile styles */
-.profile-container {
+.GitHub-profile-container {
   padding: 20px;
   max-width: 100%;
   box-sizing: border-box;
 }
 
-.profile-header {
+.GitHub-profile-header {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -120,7 +124,7 @@ body {
   justify-content: center;
 }
 
-.profile-image {
+.GitHub-profile-image {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -158,24 +162,25 @@ body {
 .youtube { background-color: #ff0000; }
 .instagram { background-color: #c13584; }
 
-.about {
+.GitHub-about {
   margin-top: 20px;
   text-align: center;
 }
 
-.gif-section {
+.GitHub-gif-section {
   margin-top: 20px;
   text-align: center;
 }
 
-.profile-gif {
+.GitHub-profile-gif {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
+  align-items: right;
 }
 
 /* Repository list styles */
-.repository-list {
+.GitHub-repository-list {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -183,7 +188,7 @@ body {
   box-sizing: border-box;
 }
 
-.repository-header {
+.GitHub-repository-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -216,7 +221,7 @@ body {
   cursor: pointer;
 }
 
-.new-btn {
+.GitHub-new-btn {
   padding: 5px 16px;
   font-size: 14px;
   border-radius: 6px;
@@ -323,7 +328,7 @@ body {
     width: 100%;
   }
 
-  .profile-header {
+  .GitHub-profile-header {
     flex-direction: column;
     text-align: center;
   }

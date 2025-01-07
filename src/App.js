@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Arush />} /> {/* Landing page */}
+        <Route path="/" element={<Arush />} /> 
         <Route path="/email" element={<EmailApp />} />
         <Route path="/RubiksCube" element={<RubiksCube />} />
         <Route path="/github" element={<GitHubApp />} />

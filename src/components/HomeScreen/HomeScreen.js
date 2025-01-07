@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './HomeScreen.css';
 import DynamicIsland from '../DynamicIsland/DynamicIsland';
 import GitHubApp from '../GitHubApp/GitHubApp';
+import EmailApp from '../EmailApp/EmailApp';
 import desktopBackground from './videoplayback.gif';
 import mobileBackground from './background.jpg';
 
@@ -11,6 +12,7 @@ const HomeScreen = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [showIcons, setShowIcons] = useState(false);
   const [isGitHubAppVisible, setGitHubAppVisible] = useState(false);
+  const [isEmailAppVisible, setEmailAppVisible] = useState(false);
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -67,6 +69,10 @@ const HomeScreen = () => {
     setGitHubAppVisible(!isGitHubAppVisible);
   };
 
+  const toggleEmailApp = () => {
+    setEmailAppVisible(!isEmailAppVisible);
+  };
+
   const handleMouseMove = (e) => {
     if (e.clientY > windowSize.height - 100) {
       setShowIcons(true);
@@ -115,7 +121,7 @@ const HomeScreen = () => {
       <DynamicIsland />
 
       <div className={`icon-container ${showIcons ? 'visible' : ''}`}>
-        <div className="icon email-icon" onClick={() => navigate('/email')} />
+        <div className="icon email-icon" onClick={toggleEmailApp} />
         <div className="icon insta-icon" onClick={() => window.open('https://www.instagram.com', '_blank')} />
         <div className="icon github-icon" onClick={toggleGitHubApp} />
         <div className="icon linkedin-icon" onClick={() => window.open('https://www.linkedin.com', '_blank')} />
@@ -126,6 +132,13 @@ const HomeScreen = () => {
         <>
           <div className="github-app-overlay" onClick={toggleGitHubApp} />
           <GitHubApp onClose={toggleGitHubApp} />
+        </>
+      )}
+
+      {isEmailAppVisible && (
+        <>
+          <div className="email-app-overlay" onClick={toggleEmailApp} />
+          <EmailApp onClose={toggleEmailApp} />
         </>
       )}
     </div>
